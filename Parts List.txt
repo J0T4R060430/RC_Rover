@@ -11,6 +11,8 @@ Here is all of the parts I used for this project:
 	M3 * 8mm - 8
 	M3 * 6mm - 4
 	M3 Hex Nut - 24
+10. PS3 Controller
+
 
 Amazon Purchase Links:
 ESP32 - https://www.amazon.ca/dp/B07KTV2RRM?psc=1&ref=ppx_yo2ov_dt_b_product_details
