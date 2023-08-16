@@ -21,32 +21,6 @@ const int PWMResolution = 8;
 const int rightPWMSpeedChannel = 4;
 const int leftPWMSpeedChannel = 5;
 
-// void notify()
-// {
-//   int yAxisValue =(Ps3.data.analog.stick.ly);  //Left stick  - y axis - forward/backward car movement
-//   int xAxisValue =(Ps3.data.analog.stick.rx);  //Right stick - x axis - left/right car movement
-
-//   if (yAxisValue <= -50)       //Move car Forward
-//   {
-//     rotateMotor(MAX_MOTOR_SPEED, MAX_MOTOR_SPEED);
-//   }
-//   else if (yAxisValue >= 50)   //Move car Backward
-//   {
-//     rotateMotor(-MAX_MOTOR_SPEED, -MAX_MOTOR_SPEED);
-//   }
-//   else if (xAxisValue >= 50)  //Move car Right
-//   {
-//     rotateMotor(-MAX_MOTOR_SPEED, MAX_MOTOR_SPEED);
-//   }
-//   else if (xAxisValue <= -50)   //Move car Left
-//   {
-//     rotateMotor(MAX_MOTOR_SPEED, -MAX_MOTOR_SPEED);
-//   }
-//   else                                      //Stop the car
-//   {
-//     rotateMotor(0, 0);
-//   } 
-// }
 
 
 void drive(){
@@ -137,7 +111,7 @@ void setup()
   setUpPinModes();
   Serial.begin(115200);
   Ps3.attach(drive);
-  Ps3.begin("c0:49:ef:91:c6:82");
+  Ps3.begin(""); //insert your PS3 Controller's MAC address between quotation marks.
   Serial.println("Ready.");
 }
 
