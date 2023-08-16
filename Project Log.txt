@@ -1,0 +1,139 @@
+7/29/2023
+-Started the project today. I tackled the bluetooth problem first.
+-I watched some youtube videos on how to connect a PS3 controller to Arduino Uno R3, which I have on hand. I ordered a USB host shield and a bluetooth dongle, which will arrive tomorrow. Thank God for Amazon Prime.
+-Here is what I want to do: Arduino Uno R3 at the bottom, USB host shield on top with bluetooth dongle connected to PS3 controller, and a motor shield on top, driving 4 dc motors. I will design and print the frame and wheels.
+- Watched an hour of tutorials, L293N seems really good. I will order it with a 4 AA battery power supply. Its all working out.
+-The final product will be a 4 wheel RC car controlled by PS3 controller.
+
+7/30/2023
+-L293N and bluetooth dongle came today, so I cant really work on anything. 
+-Watched more Youtube tutorials, I think this will be quite easy
+
+7/31/2023
+-Everything arrived today. So excited.
+-Shit Shit shit shittihi
+-ok, so the bluetooth wont work, and the motor shield cannot do more than one motor at a time wwith 6v power supply
+-The bluetooth part is so wacked, I correctly soldered the host shield, and tested it with a bunch of other appliances, so the USB host shield is fine
+-the PS3 controller is definitely working because I was just using it for my emulator
+-the Dongle! it sucks so much! i plugged it into my pc and it doesnt have the correct drivers!
+-the motor shield is so dumb. the technology is so old - from 1960s, no wonder it requires 24V to power all 4 motors
+-well something worked: my code. When I use a wired connection, Im getting input from the PS3, and the Arduino is sending signals to the motor shield, so one motor is running
+-So tires, its 1 am, gonna sleep and deal with this mess tmr
+
+8/1/2023
+-OK, so I did tons more research, which is something I sould have done before making any purchases, and got solutions.
+-I will replace the L293N with a Adafruit Motor Shield 2.0, which can power 4 6v DC motors with a 6V power supply. Also much better microprocessors cause its not made 60 years ago lol
+-Still no solution to the Bluetooth problem, trying everything I can but still refuse to connect
+-Ordered motor shield on Amazon. Ariiving on Saturday. Before that, I hope to fix the bluetooth Problem.
+
+8/2/2023
+-Did not Fix the Bluetooth. UUUUUUUUUUGGGGGGGGGGGGGGGGGGHHHHHHHHHHHHHHHHHHHHHHHHHH
+-Really frustrated, decided to try PS4 controllers. One coming tmr.
+-Something I did do today is make the prototype Arduino holder. Works not fine, will do more iterations tmr
+
+8/3/2023
+-Nope. PS4 does not work. I used the same knock off one in the tutorial but no connect. I am so mad rn
+-Arduino Holder is finished now, it will slide in and be held by a m3.
+-I have to figure out the bluetooth or this wont be a RC. Why did I not choose to use Radio?
+-Started designing a mount for the 6v hobby motors. Making god progress.
+
+8/4/2023
+-Got a real Sony PS4 controller from facebook. Trying it out.
+-Noooooooooooooooooooooooooooooooooooooooooooooooooooooo
+-Yeah it didn't work, still no connect. Its probably the dongle, because everything else works except that.
+-tested the dongle on Windows 10 System, works fine. What is the probelm? Searched forums for 2 hours and this problem seems prettty common, and no one has a reliable solution. Guess its a chance game.
+-Ordered new Dongle, arrving tmr.
+-Finished the first Version of the motor mount. Works ok, adding more grip tmr
+
+8/5/2023
+-I. Hate. Bluetooth. New dongle also no workie. returned immediately.
+-Motor Mount is perfected. Uses hot glue to really secure it, and there are holes with nuts inside to connect it to main frame using M3 nuts.
+-Motor Shield Arrived, tested it. Works like a charm, but now I'm seeing more problems.
+-The 6V DC motors spin too fast for a wheel, and has like no torque. They are made for drones and boats after all. Gonna replace them in the future.
+-Bluetooth refuses to work. Seeking alternatives.
+-Found something. this WEMOS D1 R32 seems like a dream come true. It has built in Wifi and Buetooth, has 4 MB cache, and so much storage. Overall a great replacement for Arduino Uno. It's even build to mimic the arduino uno shape, so all the shields will work with it. Is this my salvation?
+-And it runs Arduino Code! This could be it!
+
+8/6/2023
+-OK, HUGE progress! The godforsaken Bluetooth finally worked, although it only connects to the PS3... No matter, a connection is a connection. Im so grateful.
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡟⠋⠈⠙⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠤⢤⡀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⠀⠈⢇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡠⠞⠀⠀⢠⡜⣦⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡃⠀⠀⠀⠀⠈⢷⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡠⠊⣠⠀⠀⠀⠀⢻⡘⡇
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠃⠀⠀⠀⠀⠀⠀⠙⢶⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡠⠚⢀⡼⠃⠀⠀⠀⠀⠸⣇⢳
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⠀⣀⠖⠀⠀⠀⠀⠉⠀⠀⠈⠉⠛⠛⡛⢛⠛⢳⡶⠖⠋⠀⢠⡞⠀⠀⠀⠐⠆⠀⠀⣿⢸
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠻⣦⣀⣴⡟⠀⠀⢶⣶⣾⡿⠀⠀⣿⢸
+⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⠞⠁⠀⠀⠀⠀⠀⠀⠀⠀⡠⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣏⠀⠀⠀⣶⣿⣿⡇⠀⠀⢏⡞
+⠀⠀⠀⠀⠀⠀⢀⡴⠛⠀⠀⠀⠀⠀⠀⠀⠀⢀⢀⡾⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⢦⣤⣾⣿⣿⠋⠀⠀⡀⣾⠁
+⠀⠀⠀⠀⠀⣠⠟⠁⠀⠀⠀⣀⠀⠀⠀⠀⢀⡟⠈⢀⣤⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠙⣏⡁⠀⠐⠚⠃⣿⠀
+⠀⠀⠀⠀⣴⠋⠀⠀⠀⡴⣿⣿⡟⣷⠀⠀⠊⠀⠴⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠀⠀⠀⠀⢹⡆
+⠀⠀⠀⣴⠃⠀⠀⠀⠀⣇⣿⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⡶⢶⣶⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇
+⠀⠀⣸⠃⠀⠀⠀⢠⠀⠊⠛⠉⠁⠀⠀⠀⠀⠀⠀⠀⢲⣾⣿⡏⣾⣿⣿⣿⣿⠖⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢧
+⠀⢠⡇⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠈⠛⠿⣽⣿⡿⠏⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡜
+⢀⡿⠀⠀⠀⠀⢀⣤⣶⣟⣶⣦⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇
+⢸⠇⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇
+⣼⠀⢀⡀⠀⠀⢷⣿⣿⣿⣿⣿⣿⡿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡇
+⡇⠀⠈⠀⠀⠀⣬⠻⣿⣿⣿⡿⠙⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⠁
+⢹⡀⠀⠀⠀⠈⣿⣶⣿⣿⣝⡛⢳⠭⠍⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⠃⠀
+⠸⡇⠀⠀⠀⠀⠙⣿⣿⣿⣿⣿⣿⣷⣦⣀⣀⣀⣤⣤⣴⡶⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⠇⠀⠀
+⠀⢿⡄⠀⠀⠀⠀⠀⠙⣇⠉⠉⠙⠛⠻⠟⠛⠛⠉⠙⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡰⠋⠀⠀⠀
+⠀⠈⢧⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠞⠁⠀⠀⠀⠀
+⠀⠀⠘⢷⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠞⠁⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠱⢆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡴⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠛⢦⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣠⠴⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⠲⠤⣤⣤⣤⣄⠀⠀⠀⠀⠀⠀⠀⢠⣤⣤⠤⠴⠒⠛⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Happy Face
+-Bad new. Motor Shield does not like the 3.3V on D1 R32. It refuses to talk with the board and doesn't work overall. Need fixing.
+-Also Desgined the main frame. Printing a V1 for testing. 5 hours, not Bad.
+-So I went around and did more digging... And found a gem. The ESP32. The D1 R32 uses it as a processor, so the same performance and functions, but it deosn't rely on the arduino ecosystem. ESP32 is so much more robust than Arduino, and it workes great with this L293N Motor Driver that I have been eyeing for a while. Gonna give it a try.
+-Also found lots of amazing tutorials from this channel on Youtube: https://www.youtube.com/@hashincludeelectronics. Absolutely Amazing stuff. He used ESP32, L293N, and PS controllers to make a lot of interesting stuff, which includes my project as well. Why didn't I just follow the tutorials? Could've saved so Much trouble. Stupid.
+
+8/7/2023
+-ESP32 is so good. Everything works flawlessly. Connects to PS3 faster than anything else, and the range is amazing. Thank God for SixAxis Pair tool, absolute life saver, being able to change the MAC address is so important.
+-I think I jinxed myself. I need a 7-12V power supply for the ESP32 and 2 Motor ports to be powerd at the same time, and preferably stronger than AA batteries. Decided to order a 7.4V LiPo Battery. Also ordered jumper wires, Deans Plug, and Actual wheels and more suitable motors.
+-Worked on code a lot. Copy Pasted like 200 lines of code today. I want my RC to drive like a tank, one joyStick for one side.
+-Code is done and tested, and it is 2 AM. Yawn.
+
+8/8/2023
+-Wheels arrived, waiting for battery. In theory everythign should work, so Im not stressed.
+-Started designing the holder for ESP32 and L293N. Finished before Lunch.
+-Started designing new motor mounts, and this one is relatively easy. Managed to perfect it before Dinner.
+-Started designing the main frame, 2.0. Although I don't have the physical battery, I did find its dimensions online. 
+-The main frame looks liek this: A flat board with cutouts for the components, and 4 motor mounts printed on instead of attached. ESP32 on top and in front, L293N close behind. Holes for wires to go through. Looks really solid, starting a print before bed.
+
+8/9/2023
+-Checked print, everything fits perfectly except for the hole reserved for the Deans T plug to stay in. Used Soldering iron to melt away aprt of plastic, now works.
+-Assembled everything. Looking really nice. The RC is very compact, 180mm long and 85mm wide, 60 mm tall.
+-Code is loaded, just waiting for Battery.
+-Shit, Battery is slightly bigger than the dimesntions given online, so it doesn'y fit.
+-Made final adjsutments to main frame, will get final print around 9 pm.
+-It is 8:30. So nervous.
+-Moment of truth---
+-It fits!
+-AAAAAAAAAAAHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡟⠋⠈⠙⣦⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠤⢤⡀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇⠀⠀⠀⠈⢇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡠⠞⠀⠀⢠⡜⣦⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡃⠀⠀⠀⠀⠈⢷⡄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡠⠊⣠⠀⠀⠀⠀⢻⡘⡇
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⠃⠀⠀⠀⠀⠀⠀⠙⢶⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢀⡠⠚⢀⡼⠃⠀⠀⠀⠀⠸⣇⢳
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣾⠀⣀⠖⠀⠀⠀⠀⠉⠀⠀⠈⠉⠛⠛⡛⢛⠛⢳⡶⠖⠋⠀⢠⡞⠀⠀⠀⠐⠆⠀⠀⣿⢸
+⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⠇⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠻⣦⣀⣴⡟⠀⠀⢶⣶⣾⡿⠀⠀⣿⢸
+⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⠞⠁⠀⠀⠀⠀⠀⠀⠀⠀⡠⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠻⣏⠀⠀⠀⣶⣿⣿⡇⠀⠀⢏⡞
+⠀⠀⠀⠀⠀⠀⢀⡴⠛⠀⠀⠀⠀⠀⠀⠀⠀⢀⢀⡾⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠘⢦⣤⣾⣿⣿⠋⠀⠀⡀⣾⠁
+⠀⠀⠀⠀⠀⣠⠟⠁⠀⠀⠀⣀⠀⠀⠀⠀⢀⡟⠈⢀⣤⠂⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠙⣏⡁⠀⠐⠚⠃⣿⠀
+⠀⠀⠀⠀⣴⠋⠀⠀⠀⡴⣿⣿⡟⣷⠀⠀⠊⠀⠴⠛⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⠀⠀⠀⠀⢹⡆
+⠀⠀⠀⣴⠃⠀⠀⠀⠀⣇⣿⣿⣿⠃⠀⠀⠀⠀⠀⠀⠀⠀⢀⣤⡶⢶⣶⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇
+⠀⠀⣸⠃⠀⠀⠀⢠⠀⠊⠛⠉⠁⠀⠀⠀⠀⠀⠀⠀⢲⣾⣿⡏⣾⣿⣿⣿⣿⠖⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢧
+⠀⢠⡇⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠈⠈⠛⠿⣽⣿⡿⠏⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡜
+⢀⡿⠀⠀⠀⠀⢀⣤⣶⣟⣶⣦⣄⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇
+⢸⠇⠀⠀⠀⠀⣿⣿⣿⣿⣿⣿⣿⣿⣧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡇
+⣼⠀⢀⡀⠀⠀⢷⣿⣿⣿⣿⣿⣿⡿⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢠⡇
+⡇⠀⠈⠀⠀⠀⣬⠻⣿⣿⣿⡿⠙⠀⠀⢀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣼⠁
+⢹⡀⠀⠀⠀⠈⣿⣶⣿⣿⣝⡛⢳⠭⠍⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⢰⠃⠀
+⠸⡇⠀⠀⠀⠀⠙⣿⣿⣿⣿⣿⣿⣷⣦⣀⣀⣀⣤⣤⣴⡶⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣰⠇⠀⠀
+⠀⢿⡄⠀⠀⠀⠀⠀⠙⣇⠉⠉⠙⠛⠻⠟⠛⠛⠉⠙⠉⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⡰⠋⠀⠀⠀
+⠀⠈⢧⠀⠀⠀⠀⠀⠀⠈⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠞⠁⠀⠀⠀⠀
+⠀⠀⠘⢷⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣠⠞⠁⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠱⢆⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⡴⠋⠁⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠛⢦⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⣀⣠⠴⠟⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀
+⠀⠀⠀⠀⠀⠀⠀⠀⠈⠛⠲⠤⣤⣤⣤⣄⠀⠀⠀⠀⠀⠀⠀⢠⣤⣤⠤⠴⠒⠛⠋⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀Another very Happy face :D
+-RC Car is finished. Runs better than expected, got some pretty solid batteries.
+-PROJECT FINISHED!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+

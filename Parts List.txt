@@ -1,0 +1,8 @@
+Here is all of the parts I used for this project:
+1. ESP32 Dev Kit
+2. L293N Motor Driver
+3. Arduino Driver Motor * 4
+4. Arduino Wheels * 4
+5. 7.4V 1800 mAh LiPo Battery
+6. 10 Jumper Wires
+7. 3D Printed Frame, ESP32 and L293N Driver Holder
